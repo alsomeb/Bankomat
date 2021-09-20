@@ -42,7 +42,7 @@ while True:
                     break
             else:
                 accounts[kontonummer] = 0  # Skapar ett nytt kontonummer i accounts med 0 saldo i dictionaryn (accounts[key] = value)
-                log_list[kontonummer] = []
+                log_list[kontonummer] = [] # lägger in en tom lista i dict value (nesting). Tex kontonr "123" = []
                 break
     if val == "2":
         kontonummer = input("Ange kontonummer: ")
@@ -91,6 +91,7 @@ while True:
                 print("Du har angivit fel kontonr, går tillbaka till huvudmeny")
                 break
 
+    #döpte variablerna bara till random bokstäver, har inge större betydelse, bara komma ihåg att skriva dem rätt
     j = json.dumps(accounts)
     with open("log.json", "w") as f: #sparar kontonr och tillhörande saldo
         f.write(j)
