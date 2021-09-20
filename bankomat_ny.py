@@ -2,7 +2,7 @@ import json
 import datetime
 import time
 accounts = {} #konton, finns ett 123 test konto i log.json, den måste finnas där annars körs ej programmet
-log_list = {} #loggar transaktioner, samma som ovan
+log_list = {} #loggar transaktioner i trans.json, samma som ovan
 
 with open("log.json") as json_file: #öppnar fil för kontonr och tillhörande saldo
     accounts = json.load(json_file)
