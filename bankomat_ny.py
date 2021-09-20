@@ -42,7 +42,7 @@ while True:
                     break
             else:
                 accounts[kontonummer] = 0  # Skapar ett nytt kontonummer i accounts med 0 saldo i dictionaryn (accounts[key] = value)
-                log_list[kontonummer] = []
+                log_list[kontonummer] = [] # lägger in en tom lista i dict value (nesting). Tex kontonr "123" = []
                 break
     if val == "2":
         kontonummer = input("Ange kontonummer: ")
