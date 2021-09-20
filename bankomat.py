@@ -91,6 +91,7 @@ while True:
                 print("Du har angivit fel kontonr, går tillbaka till huvudmeny")
                 break
 
+    #döpte variablerna bara till random bokstäver, har inge större betydelse, bara komma ihåg att skriva dem rätt
     j = json.dumps(accounts)
     with open("log.json", "w") as f: #sparar kontonr och tillhörande saldo
         f.write(j)
