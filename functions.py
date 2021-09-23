@@ -17,4 +17,4 @@ def AccountMenu():
     print("3. Visa saldo")
     print("4. Lista transaktioner")
     print("5. Avsluta")
-    return #stäng funkt, return inget
+    return
