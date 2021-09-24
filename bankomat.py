@@ -59,6 +59,8 @@ while True:
                         saldo = accounts[kontonummer]
                         if uttag > saldo:
                             print(colored(f"Du har inte tillräckligt på kontot, ditt saldo är {saldo}", 'red', attrs=['bold']))
+                        elif uttag == 0:
+                            print(colored("Du måste ange högre än 0kr", "red", attrs=['bold']))
                         else:
                             accounts[kontonummer] = saldo - uttag
                             print(colored(f"Du har gjort ett uttag på: {uttag}", 'green', attrs=['bold']))
@@ -78,6 +80,8 @@ while True:
                         accounts[kontonummer] = saldo + insattning
                         print(colored(f"Du har gjort en insattning på: {insattning}kr på ditt konto", 'green', attrs=['bold']))
                         log_list[kontonummer].append(colored(f"{datetime.date.today()}, {time.strftime('%H:%M')}, INSÄTTNING: {insattning}kr", 'green', attrs=['bold']))
+                    elif insattning == 0:
+                            print(colored("Du måste ange högre än 0kr", "red", attrs=['bold']))
                     else:
                         cprint("Endast siffror tillåtna, ej bokstäver och specialtecken!", 'red', attrs=['bold']) #kodat så att man ej kan skriva +,- eller andra bokstäver
                     
