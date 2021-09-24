@@ -7,7 +7,6 @@ def MainMenu(): #Med termcolor
     print("1. Skapa konto")
     print("2. Administrera konto")
     print("3. Avsluta")
-    return #så att den inte skapar flera instancer av sig själv
 
 def AccountMenu():
     acc_menu = colored("****KONTOMENY****", color="green", attrs=["reverse", "bold"])
@@ -17,4 +16,3 @@ def AccountMenu():
     print("3. Visa saldo")
     print("4. Lista transaktioner")
     print("5. Avsluta")
-    return
