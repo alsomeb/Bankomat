@@ -26,7 +26,7 @@ while True:
     if val == "3": #Avslutar bankomaten
         break
     if val == "1":
-        while True:
+        while True: #konto nr är string, blev enklare för mig så
             kontonummer = input(colored("Ange ett nytt kontonr: ", 'green', attrs=['bold'])) #annan metod för styling
             if kontonummer in accounts:
                 cprint("Kontonummret finns redan!", 'red', attrs=['bold'])
